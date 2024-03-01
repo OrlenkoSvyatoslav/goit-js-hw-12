@@ -1,6 +1,6 @@
-import { gallery, loader } from '../main';
+import { gallery } from '../main';
 
-export function createMarkup(img) {
+export function renderGalleryMarkup(img) {
   const markup = img
     .map(
       ({
@@ -30,5 +30,4 @@ export function createMarkup(img) {
     .join('');
 
   gallery.innerHTML = markup;
-  loader.classList.remove('loader');
 }

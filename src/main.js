@@ -6,9 +6,9 @@ import { getImg } from './js/pixabay-api';
 import { renderGalleryMarkup } from './js/render-functions';
 
 export const gallery = document.querySelector('.gallery');
-export const form = document.querySelector('.form');
+const form = document.querySelector('.form');
 const input = document.querySelector('.input-value-js');
-export const loader = document.querySelector('.form-container div');
+const loader = document.querySelector('.form-container div');
 
 form.addEventListener('submit', onSubmitForm);
 

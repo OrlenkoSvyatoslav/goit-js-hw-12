@@ -60,11 +60,6 @@ async function onSubmitForm(event) {
     renderGalleryMarkup(data.hits, galleryList);
     lightbox.refresh();
 
-    window.scrollBy({
-      top: 85,
-      behavior: 'smooth',
-    });
-
     loadingBefore.classList.remove('loader');
     loadMoreImgBtn.classList.remove('hidden');
   } catch (error) {
@@ -87,14 +82,16 @@ async function onClickLoadMoreBtn(event) {
     renderGalleryMarkup(data.hits, galleryList);
 
     window.scrollBy({
-      top: 500,
+      top: 800,
       behavior: 'smooth',
     });
 
     if (data.totalHits < limit) {
       loadMoreImgBtn.classList.add('hidden');
+      loadingAfter.classList.remove('loader');
       return showErrorMessege(
-        "We're sorry, but you've reached the end of search results."
+        "We're sorry, but you've reached the end of search results.",
+        '#FFA000'
       );
     }
     lightbox.refresh();

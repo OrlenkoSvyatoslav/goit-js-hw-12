@@ -1,7 +1,5 @@
-import { gallery } from '../main';
-
-export function renderGalleryMarkup(img) {
-  const markup = img
+export function renderGalleryMarkup(hits, galleryList) {
+  const markup = hits
     .map(
       ({
         webformatURL,
@@ -29,5 +27,5 @@ export function renderGalleryMarkup(img) {
     )
     .join('');
 
-  gallery.innerHTML = markup;
+  galleryList.insertAdjacentElement('beforeend', markup);
 }

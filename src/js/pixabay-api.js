@@ -1,23 +1,20 @@
-export function getImg(inputValue) {
-  const key = '42577759-46afea0faf18c5517840853c6';
-  const baseURL = 'https://pixabay.com/api/?key=';
-  const query = inputValue;
+import axios from 'axios';
 
-  const URL =
-    baseURL +
-    key +
-    '&q=' +
-    query +
-    '&image_type=photo&orientation=horizontal&safesearch=true';
+export const limit = 15;
+axios.defaults.baseURL = 'https://pixabay.com/api/';
+const API_KEY = '42577759-46afea0faf18c5517840853c6';
 
-  return fetch(URL)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Error with status ${response.status}`);
-      }
-      return response.json();
-    })
-    .catch(error => {
-      console.log(error);
-    });
+export async function getImg(page, inputValue) {
+  const { data } = await axios.get('', {
+    params: {
+      page: page,
+      per_page: limit,
+      key: API_KEY,
+      q: inputValue,
+      image_type: 'photo',
+      orientation: 'horizontal',
+      safesearch: true,
+    },
+  });
+  return data;
 }

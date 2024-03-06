@@ -120,3 +120,7 @@
   padding-right: 25px;
   justify-content: space-around;
 }
+
+.hidden {
+  display: none;
+}

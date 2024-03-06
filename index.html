@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     
-    <script type="module" crossorigin src="/goit-js-hw-11/commonHelpers.js"></script>
-    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-5b791d57.js">
-    <link rel="stylesheet" href="/goit-js-hw-11/assets/vendor-cf6910df.css">
-    <link rel="stylesheet" href="/goit-js-hw-11/assets/index-14cf28d9.css">
+    <script type="module" crossorigin src="/goit-js-hw-12/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-5401a4b0.js">
+    <link rel="stylesheet" href="/goit-js-hw-12/assets/vendor-cf6910df.css">
+    <link rel="stylesheet" href="/goit-js-hw-12/assets/index-a00c80c9.css">
   </head>
   <body>
     <section class="form-container">
@@ -19,11 +19,14 @@
           type="text"
           placeholder="Search images..."
         />
-        <button type="submit">Search</button>
+        <button class="search-btn" type="submit">Search</button>
       </form>
       <div></div>
-
-      <ul class="gallery"></ul>
+      <div class="gallery">
+        <ul class="gallery-list"></ul>
+        <button type="button" class="load-more-markup">Load more</button>
+        <div class="loading"></div>
+      </div>
     </section>
     
   </body>

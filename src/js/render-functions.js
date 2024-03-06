@@ -27,5 +27,5 @@ export function renderGalleryMarkup(hits, galleryList) {
     )
     .join('');
 
-  galleryList.insertAdjacentElement('beforeend', markup);
+  galleryList.insertAdjacentHTML('beforeend', markup);
 }

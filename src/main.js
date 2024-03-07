@@ -53,6 +53,7 @@ async function onSubmitForm(event) {
         '#EF4040'
       );
       loadingBefore.classList.remove('loader');
+      loadMoreImgBtn.classList.add('hidden');
       formSearch.reset();
       return;
     }

@@ -87,7 +87,7 @@ async function onClickLoadMoreBtn(event) {
       behavior: 'smooth',
     });
 
-    if (data.totalHits < limit) {
+    if (data.hits.length < limit) {
       loadMoreImgBtn.classList.add('hidden');
       loadingAfter.classList.remove('loader');
       return showErrorMessege(
